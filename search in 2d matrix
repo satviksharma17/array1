@@ -1,0 +1,25 @@
+public class MyClass {
+     public static boolean searchMatrix(int[][] a,int n,int x){
+         int m=a[0].length;
+         int lo=0,hi=(m*n)-1;
+         while(lo<=hi){
+             int mid=(lo+hi)/2;
+             if(a[mid/m][mid%m]==x)
+             return true;
+             if(a[mid/m][mid%m]<x)
+             lo=mid+1;
+             else
+             hi=mid-1;
+         }
+         return false;
+     }
+    public static void main(String args[]) {
+    int [][] a={ { 5, 10, 30, 40 }, 
+                        { 50, 65, 75, 85 }, 
+                        { 87, 89, 97, 98 }, 
+                        { 102, 103, 109, 150 } }; 
+    boolean ae=searchMatrix(a,4,102);
+      
+      System.out.println(ae);
+    }
+}
