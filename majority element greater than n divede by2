@@ -1,0 +1,21 @@
+public class MyClass {
+    public static int majorityElement(int[] a){
+        int count=0;
+        int candidate=0;
+        for(int num:a){
+            if(count==0)
+            candidate=num;
+            if(num==candidate)
+            {count++;}
+            else
+            count--;
+        }
+        return candidate;
+    }
+    public static void main(String args[]) {
+ int a[]={1,2,3,5,1,2,1,1,1,1,1};
+    int ae=majorityElement(a);
+      
+      System.out.println(ae);
+    }
+}
