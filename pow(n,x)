@@ -1,0 +1,28 @@
+public class MyClass {
+  public static double pow(double x,int nn)
+  {
+      double ans=1.0;
+      long n=nn;
+      if(nn<0) nn=-1*nn;
+      while(n>0)
+      {
+          if(n%2==1)
+          {ans=ans*x;n--;}
+          else
+          {
+              x=x*x;
+              n=n/2;
+          }
+      }
+      if(n<0)
+      {
+          ans=(double)(1.0)/(double)(ans);
+      }
+      return ans;
+  }
+    public static void main(String args[]) {
+  double ae=pow(2,10);
+      
+      System.out.println(ae);
+    }
+}
