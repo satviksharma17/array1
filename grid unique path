@@ -1,0 +1,20 @@
+public class MyClass {
+ 
+    static int numberOfPaths(int m, int n) 
+    { 
+        // We have to calculate m+n-2 C n-1 here 
+        // which will be (m+n-2)! / (n-1)! (m-1)! 
+        double res = 1; int r=m-1;
+        for (int i = 1; i <= r; i++) { 
+            res = res*(m+n-2-r+i)/i; 
+          
+        } 
+        return (int)res; 
+    } 
+  
+    // Driver code 
+    public static void main(String[] args) 
+    { 
+        System.out.println(numberOfPaths(3, 3)); 
+    } 
+}
